@@ -3200,6 +3200,59 @@ body.modal-aberto {
     }
 
 }
+/* =========================================
+   MÃO — AJUSTE PARA CELULAR
+========================================= */
+
+@media (max-width: 600px) {
+
+    .mao {
+        width: 180px;
+        height: 250px;
+
+        /* afasta a mão do centro do rosto */
+        right: -5px;
+        bottom: 45px;
+
+        transform-origin: center center;
+
+        animation: maoAplicandoMobile 4s ease-in-out infinite;
+    }
+
+
+    @keyframes maoAplicandoMobile {
+
+        0%, 100% {
+            transform:
+                translate(55px, 75px)
+                rotate(-8deg)
+                scale(0.62);
+        }
+
+        35% {
+            transform:
+                translate(35px, 35px)
+                rotate(-4deg)
+                scale(0.62);
+        }
+
+        55% {
+            transform:
+                translate(28px, 25px)
+                rotate(-2deg)
+                scale(0.62);
+        }
+
+        75% {
+            transform:
+                translate(38px, 40px)
+                rotate(-5deg)
+                scale(0.62);
+        }
+
+    }
+
+}
 
 
 /* =========================================
