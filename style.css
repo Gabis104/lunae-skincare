@@ -1,0 +1,4795 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap');
+
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background: #f8f2ef;
+    color: #392c2b;
+    font-family: "DM Sans", sans-serif;
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    padding: 22px 6%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: rgba(248, 242, 239, .75);
+    backdrop-filter: blur(15px);
+
+    transition: .4s;
+}
+
+
+header.scrolled {
+    padding: 15px 6%;
+
+    box-shadow:
+        0 5px 30px rgba(50, 30, 25, .08);
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+
+    font-size: 26px;
+    letter-spacing: 5px;
+    font-weight: 600;
+}
+
+
+.lua {
+    width: 38px;
+    height: 38px;
+
+    border: 2px solid #392c2b;
+
+    border-radius: 50%;
+
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at 35% 35%,
+            #f1d8d4 0%,
+            #d59f99 45%,
+            #a96f69 100%);
+
+    box-shadow:
+        0 0 0 2px rgba(185, 133, 130, .18),
+        0 4px 15px rgba(100, 60, 55, .18);
+
+    transition: .35s;
+}
+
+
+.lua::after {
+    content: "";
+
+    position: absolute;
+
+    width: 39px;
+    height: 39px;
+
+    border-radius: 50%;
+
+    background: #f8f2ef;
+
+    left: 12px;
+    top: -5px;
+}
+
+
+.logo:hover .lua {
+    transform: rotate(-12deg) scale(1.08);
+}
+
+
+/* =========================================
+   MENU
+========================================= */
+
+nav {
+    display: flex;
+    gap: 35px;
+}
+
+
+nav a {
+    text-decoration: none;
+    color: #756563;
+    font-size: 13px;
+    transition: .3s;
+}
+
+
+nav a:hover {
+    color: #392c2b;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    padding:
+        140px 7% 80px;
+
+    position: relative;
+}
+
+
+.hero-container {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    align-items: center;
+
+    gap: 70px;
+}
+
+
+.mini-title {
+    color: #b98582;
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 25px;
+}
+
+
+.hero h1 {
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size:
+        clamp(55px, 7vw, 100px);
+
+    line-height: .95;
+
+    font-weight: 500;
+
+    letter-spacing: -4px;
+}
+
+
+.hero h1 span {
+    color: #b98582;
+}
+
+
+.hero-text {
+    color: #766866;
+
+    line-height: 1.8;
+
+    max-width: 480px;
+
+    margin: 30px 0;
+}
+
+
+.botao {
+    display: inline-block;
+
+    padding:
+        16px 27px;
+
+    border-radius: 40px;
+
+    background: #392c2b;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    transition: .3s;
+}
+
+
+.botao:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 15px 30px rgba(50, 30, 25, .2);
+}
+
+
+/* =========================================
+   LOGO HERO
+========================================= */
+
+.logo-hero {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    margin-bottom: 26px;
+
+    color: #392c2b;
+
+    font-size: 25px;
+
+    font-weight: 600;
+
+    letter-spacing: 7px;
+
+    position: relative;
+}
+
+
+.logo-hero-moon {
+    width: 36px;
+    height: 36px;
+
+    border: 2px solid #392c2b;
+
+    border-radius: 50%;
+
+    position: relative;
+
+    display: inline-block;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at 35% 35%,
+            #f1d8d4,
+            #c98f89);
+
+    box-shadow:
+        0 0 0 2px rgba(185, 133, 130, .18),
+        0 4px 15px rgba(100, 60, 55, .15);
+}
+
+
+.logo-hero-moon::after {
+    content: "";
+
+    position: absolute;
+
+    width: 37px;
+    height: 37px;
+
+    border-radius: 50%;
+
+    background: #f8f2ef;
+
+    left: 13px;
+    top: -5px;
+}
+
+
+.logo-hero small {
+    position: absolute;
+
+    left: 49px;
+
+    bottom: -13px;
+
+    font-size: 7px;
+
+    letter-spacing: 3px;
+
+    color: #b98582;
+
+    font-weight: 500;
+}
+
+
+/* =========================================
+   PRODUTO HERO
+========================================= */
+
+.produto-hero {
+    position: relative;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    min-height: 560px;
+}
+
+
+.circulo {
+    width: 500px;
+    height: 500px;
+
+    border-radius: 50%;
+
+    background: #ead4d2;
+
+    position: absolute;
+
+    animation:
+        pulsar 5s infinite ease-in-out;
+}
+
+
+@keyframes pulsar {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+}
+
+
+.produto-imagem {
+    width: 90%;
+
+    position: relative;
+
+    z-index: 2;
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 30px 70px rgba(60, 35, 30, .18);
+
+    animation:
+        produtoFlutua 4s ease-in-out infinite;
+}
+
+
+@keyframes produtoFlutua {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+}
+
+
+/* =========================================
+   GOTAS HERO
+========================================= */
+
+.gota {
+    position: absolute;
+
+    width: 15px;
+    height: 22px;
+
+    background:
+        rgba(255, 255, 255, .85);
+
+    border-radius:
+        70% 30% 70% 30%;
+
+    z-index: 5;
+
+    animation:
+        cair 3s linear infinite;
+}
+
+
+.gota:nth-child(1) {
+    left: 15%;
+    top: 0;
+    animation-delay: .5s;
+}
+
+
+.gota:nth-child(2) {
+    left: 50%;
+    top: -30px;
+    animation-delay: 1.7s;
+}
+
+
+.gota:nth-child(3) {
+    right: 20%;
+    top: -20px;
+    animation-delay: 2.4s;
+}
+
+
+@keyframes cair {
+
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(500px);
+        opacity: 0;
+    }
+
+}
+
+
+/* =========================================
+   MARCA
+========================================= */
+
+.marca {
+    padding: 120px 8%;
+
+    background: #241b1a;
+
+    color: white;
+
+    text-align: center;
+}
+
+
+.marca h2 {
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size:
+        clamp(45px, 6vw, 80px);
+
+    font-weight: 400;
+
+    max-width: 900px;
+
+    margin: auto;
+}
+
+
+.marca h2 span {
+    color: #d6aaa6;
+}
+
+
+.marca p {
+    max-width: 600px;
+
+    margin: 30px auto;
+
+    color: #c3b2af;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   COLEÇÃO
+========================================= */
+
+.colecao {
+    padding: 130px 7%;
+}
+
+
+.titulo {
+    text-align: center;
+
+    margin-bottom: 70px;
+}
+
+
+.titulo small {
+    color: #b98582;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    font-size: 10px;
+}
+
+
+.titulo h2 {
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 65px;
+
+    font-weight: 400;
+
+    margin-top: 15px;
+}
+
+
+.produtos {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+
+.card {
+    background: #fffdfb;
+
+    border:
+        1px solid rgba(50, 30, 25, .1);
+
+    padding: 15px;
+
+    transition: .5s;
+
+    opacity: 0;
+
+    transform:
+        translateY(80px);
+
+    position: relative;
+}
+
+
+.card.aparecer {
+    opacity: 1;
+
+    transform:
+        translateY(0);
+}
+
+
+.card:hover {
+    transform:
+        translateY(-12px) !important;
+
+    box-shadow:
+        0 25px 60px rgba(50, 30, 25, .12);
+}
+
+
+.produto-card {
+    cursor: pointer;
+}
+
+
+.produto-box {
+    height: 400px;
+
+    background: #f2e7e2;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    position: relative;
+}
+
+
+.produto-box img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: .8s;
+}
+
+
+.card:hover img {
+    transform: scale(1.06);
+}
+
+
+.card-info {
+    padding: 25px 10px;
+}
+
+
+.card-info h3 {
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 27px;
+
+    font-weight: 400;
+}
+
+
+.card-info p {
+    color: #827270;
+
+    font-size: 12px;
+
+    margin-top: 7px;
+}
+
+
+.card-plus {
+    position: absolute;
+
+    right: 14px;
+    bottom: 14px;
+
+    width: 34px;
+    height: 34px;
+
+    display: grid;
+
+    place-items: center;
+
+    border:
+        1px solid rgba(57, 44, 43, .22);
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 253, 251, .9);
+
+    color: #392c2b;
+
+    font-size: 20px;
+
+    opacity: 0;
+
+    transform: scale(.85);
+
+    transition: .35s;
+
+    z-index: 5;
+}
+
+
+.produto-card:hover .card-plus {
+    opacity: 1;
+
+    transform: scale(1);
+}
+
+
+.produto-card:focus-visible {
+    outline: 2px solid #b98582;
+
+    outline-offset: 5px;
+}
+
+
+/* =========================================
+   MODAL
+========================================= */
+
+body.modal-aberto {
+    overflow: hidden;
+}
+
+
+.produto-modal {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 2000;
+
+    display: grid;
+
+    place-items: center;
+
+    padding: 25px;
+
+    visibility: hidden;
+
+    opacity: 0;
+
+    transition:
+        opacity .35s ease,
+        visibility .35s ease;
+}
+
+
+.produto-modal.ativo {
+    visibility: visible;
+
+    opacity: 1;
+}
+
+
+.produto-modal-backdrop {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        rgba(36, 27, 26, .42);
+
+    backdrop-filter: blur(8px);
+}
+
+
+.produto-modal-card {
+    position: relative;
+
+    z-index: 2;
+
+    width: min(850px, 100%);
+
+    display: grid;
+
+    grid-template-columns:
+        .95fr 1.05fr;
+
+    background: #fffaf7;
+
+    border:
+        1px solid rgba(57, 44, 43, .1);
+
+    box-shadow:
+        0 35px 90px rgba(40, 25, 22, .22);
+
+    transform:
+        translateY(25px) scale(.97);
+
+    transition:
+        transform .45s cubic-bezier(.2, .8, .2, 1);
+
+    overflow: hidden;
+}
+
+
+.produto-modal.ativo .produto-modal-card {
+    transform:
+        translateY(0) scale(1);
+}
+
+
+.modal-imagem {
+    min-height: 460px;
+
+    background: #f1e3df;
+
+    overflow: hidden;
+}
+
+
+.modal-imagem img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+.modal-conteudo {
+    padding: 70px 55px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+
+.modal-conteudo h2 {
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size:
+        clamp(38px, 5vw, 60px);
+
+    font-weight: 400;
+
+    line-height: 1;
+}
+
+
+.modal-conteudo p {
+    color: #766866;
+
+    line-height: 1.8;
+
+    margin: 25px 0;
+
+    max-width: 420px;
+}
+
+
+.modal-tags {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-bottom: 30px;
+}
+
+
+.modal-tags span {
+    border:
+        1px solid rgba(57, 44, 43, .14);
+
+    border-radius: 30px;
+
+    padding: 8px 13px;
+
+    color: #806e6b;
+
+    font-size: 10px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1.5px;
+}
+
+
+.modal-fechar {
+    position: absolute;
+
+    right: 18px;
+    top: 15px;
+
+    width: 38px;
+    height: 38px;
+
+    border:
+        1px solid rgba(57, 44, 43, .15);
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 255, 255, .72);
+
+    color: #392c2b;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+    z-index: 4;
+
+    transition: .25s;
+}
+
+
+.modal-fechar:hover {
+    transform: rotate(90deg);
+
+    background: #392c2b;
+
+    color: white;
+}
+
+
+/* =========================================
+   EXPERIÊNCIAS
+========================================= */
+
+.interativo {
+    background: #eee0dc;
+
+    padding: 130px 7%;
+
+    text-align: center;
+
+    overflow: hidden;
+}
+
+
+.interativo h2 {
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size:
+        clamp(45px, 6vw, 70px);
+
+    font-weight: 400;
+}
+
+
+.interativo>p {
+    color: #746563;
+
+    margin:
+        15px auto 70px;
+}
+
+
+/* =========================================
+   GEL INTERATIVO
+========================================= */
+
+.experiencia-produto {
+    position: relative;
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    min-height: 650px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+.sabonete-area {
+    width: 550px;
+
+    height: 600px;
+
+    position: relative;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    perspective: 1000px;
+}
+
+
+.sabonete-area::before {
+    content: "";
+
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(circle,
+            rgba(255, 255, 255, .8),
+            rgba(255, 255, 255, 0));
+
+    filter: blur(5px);
+}
+
+
+.sabonete {
+    width: 170px;
+
+    height: 310px;
+
+    position: relative;
+
+    background:
+        linear-gradient(100deg,
+            #e8c6c2,
+            #fff8f6 45%,
+            #e3beb9);
+
+    border-radius:
+        38px 38px 28px 28px;
+
+    box-shadow:
+        25px 35px 60px rgba(70, 40, 35, .20),
+
+        inset 8px 0 20px rgba(255, 255, 255, .5);
+
+    cursor: pointer;
+
+    z-index: 10;
+
+    transition:
+        transform .25s ease,
+        box-shadow .3s ease;
+}
+
+
+.sabonete::after {
+    content: "";
+
+    position: absolute;
+
+    width: 30px;
+    height: 220px;
+
+    left: 25px;
+    top: 35px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 255, 255, .28);
+
+    filter: blur(10px);
+
+    pointer-events: none;
+}
+
+
+.sabonete:hover {
+    box-shadow:
+        30px 45px 75px rgba(70, 40, 35, .25);
+}
+
+
+/* =========================================
+   TAMPA
+========================================= */
+
+.tampa {
+    position: absolute;
+
+    width: 125px;
+    height: 68px;
+
+    left: 22px;
+    top: -68px;
+
+    background:
+        linear-gradient(90deg,
+            #dcdcdc,
+            #ffffff 35%,
+            #eeeeee 65%,
+            #cfcfcf);
+
+    border-radius:
+        15px 15px 9px 9px;
+
+    box-shadow:
+        0 10px 22px rgba(50, 30, 25, .20),
+
+        inset 0 2px 4px rgba(255, 255, 255, .9);
+
+    z-index: 30;
+
+    transition:
+        transform .7s cubic-bezier(.2, .8, .2, 1),
+
+        opacity .4s ease;
+}
+
+
+.tampa::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 7px;
+
+    border-radius:
+        10px 10px 6px 6px;
+
+    border:
+        1px solid rgba(80, 80, 80, .12);
+}
+
+
+.tampa span {
+    position: absolute;
+
+    width: 96px;
+
+    height: 9px;
+
+    left: 14px;
+
+    bottom: -5px;
+
+    background: #cfcfcf;
+
+    border-radius: 50%;
+}
+
+
+.sabonete.aberto .tampa {
+
+    transform:
+        translate(125px, -60px) rotate(28deg);
+
+    opacity: .97;
+}
+
+
+/* =========================================
+   PUMP
+========================================= */
+
+.pump {
+    position: absolute;
+
+    width: 85px;
+    height: 20px;
+
+    left: 42px;
+    top: -30px;
+
+    background:
+        linear-gradient(180deg,
+            #fff,
+            #e7e7e7);
+
+    border-radius: 20px;
+
+    z-index: 15;
+
+    cursor: pointer;
+
+    transition:
+        transform .18s ease,
+        box-shadow .25s ease,
+        filter .25s ease;
+}
+
+
+.pump::before {
+    content: "";
+
+    position: absolute;
+
+    width: 20px;
+    height: 38px;
+
+    left: 32px;
+    top: -32px;
+
+    background: #f7f7f7;
+
+    border-radius: 8px;
+}
+
+
+.pump::after {
+    content: "";
+
+    position: absolute;
+
+    width: 18px;
+    height: 3px;
+
+    left: 8px;
+    top: 4px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 255, 255, .9);
+}
+
+
+.bico {
+    position: absolute;
+
+    width: 45px;
+    height: 12px;
+
+    right: -30px;
+    top: 4px;
+
+    background: #fff;
+
+    border-radius: 10px;
+}
+
+
+.sabonete.pressionando .pump {
+    transform:
+        translateY(13px);
+}
+
+
+.pump:hover {
+    filter: brightness(1.02);
+
+    box-shadow:
+        0 5px 14px rgba(70, 40, 35, .12);
+}
+
+
+.pump-destaque {
+    animation:
+        pumpConvite 1.4s ease-in-out infinite;
+}
+
+
+@keyframes pumpConvite {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(3px);
+    }
+
+}
+
+
+/* =========================================
+   ESPUMA
+========================================= */
+
+.espuma {
+    position: absolute;
+
+    width: 28px;
+    height: 28px;
+
+    top: -37px;
+    left: 120px;
+
+    background:
+        radial-gradient(circle at 35% 30%,
+            white,
+            #f8eeee);
+
+    border-radius: 50%;
+
+    opacity: 0;
+
+    z-index: 25;
+
+    pointer-events: none;
+
+    box-shadow:
+        0 3px 10px rgba(70, 40, 35, .12);
+}
+
+
+.sabonete.pressionando .espuma {
+    animation:
+        espumaPump 1.2s ease-out forwards;
+}
+
+
+@keyframes espumaPump {
+
+    0% {
+        opacity: 0;
+
+        transform:
+            translate(0, 0) scale(.2);
+    }
+
+    15% {
+        opacity: 1;
+
+        transform:
+            translate(0, -5px) scale(.7);
+    }
+
+    45% {
+        opacity: 1;
+
+        transform:
+            translate(8px, 20px) scale(1);
+    }
+
+    75% {
+        opacity: .9;
+
+        transform:
+            translate(18px, 45px) scale(1.25);
+    }
+
+    100% {
+        opacity: 0;
+
+        transform:
+            translate(30px, 75px) scale(1.5);
+    }
+
+}
+
+
+.espuma2 {
+    width: 19px;
+    height: 19px;
+    left: 130px;
+    top: -35px;
+}
+
+
+.espuma3 {
+    width: 15px;
+    height: 15px;
+    left: 108px;
+    top: -33px;
+}
+
+
+.espuma4 {
+    width: 12px;
+    height: 12px;
+    left: 145px;
+    top: -30px;
+}
+
+
+.espuma5 {
+    width: 10px;
+    height: 10px;
+    left: 118px;
+    top: -25px;
+}
+
+
+.espuma2 {
+    animation-delay: .12s !important;
+}
+
+
+.espuma3 {
+    animation-delay: .22s !important;
+}
+
+
+.espuma4 {
+    animation-delay: .32s !important;
+}
+
+
+.espuma5 {
+    animation-delay: .40s !important;
+}
+
+
+/* =========================================
+   JATO
+========================================= */
+
+.produto-jato {
+    position: absolute;
+
+    width: 7px;
+    height: 7px;
+
+    background: #e8b8b3;
+
+    border-radius: 50%;
+
+    left: 158px;
+    top: -17px;
+
+    opacity: 0;
+
+    z-index: 25;
+}
+
+
+.sabonete.pressionando .produto-jato {
+    animation:
+        produtoSaindo .7s ease-out forwards;
+}
+
+
+@keyframes produtoSaindo {
+
+    0% {
+        opacity: 1;
+
+        transform:
+            translate(0, 0) scale(.5);
+    }
+
+    35% {
+        opacity: 1;
+
+        transform:
+            translate(20px, 5px) scale(1);
+    }
+
+    100% {
+        opacity: 0;
+
+        transform:
+            translate(55px, 18px) scale(.3);
+    }
+
+}
+
+
+/* =========================================
+   TEXTO FRASCO
+========================================= */
+
+.nome-produto {
+    position: absolute;
+
+    top: 115px;
+
+    width: 100%;
+
+    text-align: center;
+
+    letter-spacing: 5px;
+
+    font-size: 16px;
+
+    z-index: 3;
+}
+
+
+.sub-produto {
+    position: absolute;
+
+    top: 150px;
+
+    width: 100%;
+
+    text-align: center;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    color: #756563;
+
+    z-index: 3;
+}
+
+
+.detalhe-produto {
+    position: absolute;
+
+    bottom: 35px;
+
+    width: 100%;
+
+    text-align: center;
+
+    font-size: 7px;
+
+    letter-spacing: 2px;
+
+    color: #8b7774;
+
+    z-index: 3;
+}
+
+
+/* =========================================
+   INGREDIENTES
+========================================= */
+
+.ingredientes {
+    position: absolute;
+
+    right: 0;
+    top: 50%;
+
+    width: 280px;
+
+    transform:
+        translateY(-50%) translateX(60px);
+
+    opacity: 0;
+
+    transition: .8s ease;
+
+    pointer-events: none;
+}
+
+
+.experiencia-produto.aberto .ingredientes {
+    opacity: 1;
+
+    transform:
+        translateY(-50%) translateX(0);
+}
+
+
+.ingrediente {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 20px 0;
+
+    border-bottom:
+        1px solid rgba(60, 40, 35, .15);
+
+    text-align: left;
+
+    transition: .3s;
+}
+
+
+.ingrediente:hover {
+    transform: translateX(6px);
+
+    padding-left: 5px;
+}
+
+
+.ingrediente span {
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    color: #b98582;
+}
+
+
+.ingrediente strong {
+    display: block;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 20px;
+
+    font-weight: 400;
+
+    color: #392c2b;
+}
+
+
+.ingrediente small {
+    display: block;
+
+    margin-top: 4px;
+
+    font-size: 10px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    color: #927b78;
+}
+
+
+/* =========================================
+   INSTRUÇÃO
+========================================= */
+
+.instrucao {
+    margin-top: 10px;
+
+    font-size: 10px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 3px;
+
+    color: #a47774;
+
+    transition: .4s;
+}
+
+
+.botao-fechar-produto {
+    margin: 22px auto 0;
+
+    padding: 10px 18px;
+
+    border:
+        1px solid rgba(50, 30, 25, .16);
+
+    border-radius: 30px;
+
+    background:
+        rgba(255, 255, 255, .28);
+
+    color: #665552;
+
+    font-family:
+        "DM Sans",
+        sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform: translateY(8px);
+
+    transition: .4s;
+}
+
+
+.experiencia-produto.aberto~.botao-fechar-produto {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+}
+
+
+.botao-fechar-produto:hover {
+    background:
+        rgba(255, 255, 255, .65);
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* =========================================
+   SÉRUM
+========================================= */
+
+.serum-interativo {
+    max-width: 1150px;
+
+    margin: 170px auto 0;
+
+    padding-top: 100px;
+
+    border-top:
+        1px solid rgba(70, 40, 35, .12);
+}
+
+
+.serum-subtexto {
+    color: #746563;
+
+    max-width: 560px;
+
+    margin:
+        15px auto 70px;
+
+    line-height: 1.8;
+}
+
+
+.serum-experiencia {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    align-items: center;
+
+    gap: 90px;
+
+    text-align: left;
+}
+
+
+.serum-area {
+    height: 600px;
+
+    position: relative;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    perspective: 1000px;
+}
+
+
+.serum-frascosombra {
+    position: absolute;
+
+    width: 400px;
+    height: 400px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(circle,
+            rgba(255, 255, 255, .9),
+            rgba(255, 255, 255, 0));
+
+    filter: blur(8px);
+}
+
+
+.serum-frasco {
+    position: relative;
+
+    width: 205px;
+    height: 310px;
+
+    border-radius:
+        35px 35px 27px 27px;
+
+    background:
+        linear-gradient(100deg,
+            #d6a39e,
+            #f5d2cd 35%,
+            #fff4f0 55%,
+            #d59c96);
+
+    box-shadow:
+        25px 35px 65px rgba(70, 40, 35, .25),
+
+        inset 10px 0 20px rgba(255, 255, 255, .4);
+
+    z-index: 10;
+
+    transition:
+        transform .3s ease;
+}
+
+
+.serum-frasco:hover {
+    transform:
+        translateY(-8px) rotateY(-4deg);
+}
+
+
+.serum-frasco::after {
+    content: "";
+
+    position: absolute;
+
+    width: 30px;
+    height: 230px;
+
+    left: 25px;
+    top: 35px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 255, 255, .3);
+
+    filter: blur(10px);
+
+    pointer-events: none;
+}
+
+
+.serum-gargalo {
+    position: absolute;
+
+    width: 65px;
+    height: 38px;
+
+    left: 70px;
+    top: -30px;
+
+    background:
+        linear-gradient(90deg,
+            #eeeeee,
+            #ffffff,
+            #d9d9d9);
+
+    border-radius:
+        9px 9px 4px 4px;
+
+    box-shadow:
+        0 5px 12px rgba(60, 40, 35, .15);
+}
+
+
+.conta-gotas {
+    position: absolute;
+
+    width: 105px;
+    height: 30px;
+
+    left: 50px;
+    top: -72px;
+
+    z-index: 25;
+
+    cursor: pointer;
+
+    transform-origin:
+        70% 50%;
+
+    transition:
+        transform .2s ease;
+}
+
+
+.borracha-gota {
+    position: absolute;
+
+    width: 42px;
+    height: 45px;
+
+    left: 0;
+    top: -8px;
+
+    border-radius:
+        15px 15px 12px 12px;
+
+    background:
+        linear-gradient(100deg,
+            #d9aaa5,
+            #f2cbc7,
+            #c88c85);
+
+    box-shadow:
+        0 5px 12px rgba(70, 40, 35, .16);
+}
+
+
+.haste-gota {
+    position: absolute;
+
+    width: 60px;
+    height: 12px;
+
+    left: 35px;
+    top: 8px;
+
+    background:
+        linear-gradient(180deg,
+            #eeeeee,
+            #ffffff,
+            #d6d6d6);
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 3px 7px rgba(70, 40, 35, .12);
+}
+
+
+.bico-gota {
+    position: absolute;
+
+    width: 30px;
+    height: 8px;
+
+    right: -25px;
+    top: 10px;
+
+    background: #fafafa;
+
+    border-radius: 10px;
+}
+
+
+.conta-gotas:hover {
+    transform:
+        translateY(-3px);
+}
+
+
+.conta-gotas:focus-visible {
+    outline: 2px solid #b98582;
+
+    outline-offset: 5px;
+
+    border-radius: 20px;
+}
+
+
+.conta-gotas-pressionado {
+    animation:
+        pressionarContaGotas .55s ease;
+}
+
+
+@keyframes pressionarContaGotas {
+
+    0%,
+    100% {
+        transform:
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            translateY(15px) rotate(-3deg);
+    }
+
+}
+
+
+/* =========================================
+   GOTAS DO SÉRUM
+========================================= */
+
+.gota-serum {
+    position: absolute;
+
+    width: 17px;
+    height: 25px;
+
+    border-radius:
+        70% 30% 70% 30%;
+
+    background:
+        radial-gradient(circle at 30% 25%,
+            #fff2ee 0%,
+            #e98d83 28%,
+            #c75d54 70%,
+            #a9423a 100%);
+
+    box-shadow:
+        0 4px 12px rgba(150, 65, 55, .35);
+
+    opacity: 0;
+
+    z-index: 30;
+
+    pointer-events: none;
+}
+
+
+.gs1 {
+    left: 163px;
+    top: -38px;
+}
+
+
+.gs2 {
+    left: 153px;
+    top: -34px;
+
+    width: 12px;
+    height: 18px;
+}
+
+
+.gs3 {
+    left: 176px;
+    top: -32px;
+
+    width: 10px;
+    height: 15px;
+}
+
+
+.gs4 {
+    left: 167px;
+    top: -30px;
+
+    width: 8px;
+    height: 13px;
+}
+
+
+.gs5 {
+    left: 181px;
+    top: -28px;
+
+    width: 7px;
+    height: 11px;
+}
+
+
+.serum-liberando .gs1 {
+    animation:
+        quedaGota1 1s ease-in forwards;
+}
+
+
+.serum-liberando .gs2 {
+    animation:
+        quedaGota2 1.05s .05s ease-in forwards;
+}
+
+
+.serum-liberando .gs3 {
+    animation:
+        quedaGota3 .95s .1s ease-in forwards;
+}
+
+
+.serum-liberando .gs4 {
+    animation:
+        quedaGota4 1.15s .15s ease-in forwards;
+}
+
+
+.serum-liberando .gs5 {
+    animation:
+        quedaGota5 1.1s .2s ease-in forwards;
+}
+
+
+@keyframes quedaGota1 {
+
+    0% {
+        opacity: 0;
+        transform:
+            translate(0, 0) scale(.3);
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform:
+            translate(8px, 120px) scale(1);
+    }
+
+}
+
+
+@keyframes quedaGota2 {
+
+    0% {
+        opacity: 0;
+        transform:
+            translate(0, 0) scale(.2);
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform:
+            translate(-12px, 105px) scale(.85);
+    }
+
+}
+
+
+@keyframes quedaGota3 {
+
+    0% {
+        opacity: 0;
+        transform:
+            translate(0, 0) scale(.2);
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform:
+            translate(17px, 95px) scale(.75);
+    }
+
+}
+
+
+@keyframes quedaGota4 {
+
+    0% {
+        opacity: 0;
+        transform:
+            translate(0, 0) scale(.2);
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform:
+            translate(-3px, 135px) scale(.65);
+    }
+
+}
+
+
+@keyframes quedaGota5 {
+
+    0% {
+        opacity: 0;
+        transform:
+            translate(0, 0) scale(.2);
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform:
+            translate(25px, 115px) scale(.55);
+    }
+
+}
+
+
+/* =========================================
+   RÓTULO SÉRUM
+========================================= */
+
+.serum-logo {
+    position: absolute;
+
+    top: 105px;
+
+    width: 100%;
+
+    text-align: center;
+
+    font-size: 19px;
+
+    letter-spacing: 5px;
+
+    color: #392c2b;
+}
+
+
+.serum-nome {
+    position: absolute;
+
+    top: 145px;
+
+    width: 100%;
+
+    text-align: center;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 22px;
+
+    letter-spacing: 3px;
+
+    color: #392c2b;
+}
+
+
+.serum-info {
+    position: absolute;
+
+    top: 180px;
+
+    width: 100%;
+
+    text-align: center;
+
+    font-size: 7px;
+
+    letter-spacing: 2px;
+
+    color: #806e6b;
+}
+
+
+.serum-ml {
+    position: absolute;
+
+    bottom: 35px;
+
+    width: 100%;
+
+    text-align: center;
+
+    font-size: 8px;
+
+    letter-spacing: 3px;
+
+    color: #806e6b;
+}
+
+
+/* =========================================
+   TEXTO SÉRUM
+========================================= */
+
+.serum-info-area {
+    padding-right: 30px;
+}
+
+
+.serum-numero {
+    display: block;
+
+    color: #b98582;
+
+    font-size: 12px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 20px;
+}
+
+
+.serum-info-area h3 {
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size:
+        clamp(40px, 5vw, 65px);
+
+    font-weight: 400;
+
+    line-height: 1;
+}
+
+
+.serum-info-area>p {
+    color: #766866;
+
+    line-height: 1.8;
+
+    max-width: 450px;
+
+    margin: 25px 0 35px;
+}
+
+
+.serum-ingredientes {
+    border-top:
+        1px solid rgba(60, 40, 35, .14);
+}
+
+
+.serum-ingredientes div {
+    padding: 15px 0;
+
+    border-bottom:
+        1px solid rgba(60, 40, 35, .14);
+
+    font-size: 13px;
+
+    color: #655552;
+}
+
+
+.serum-ingredientes span {
+    color: #b98582;
+
+    letter-spacing: 2px;
+
+    margin-right: 15px;
+
+    font-size: 10px;
+}
+
+
+.serum-instrucao {
+    margin-top: 30px;
+
+    color: #a47774;
+
+    font-size: 10px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 3px;
+}
+
+
+/* =====================================================
+   NOVA SEÇÃO — RITUAL DO CREME
+===================================================== */
+
+.ritual-creme {
+
+    min-height: 750px;
+
+    padding: 120px 8%;
+
+    display: grid;
+
+    grid-template-columns:
+        .9fr 1.1fr;
+
+    align-items: center;
+
+    gap: 80px;
+
+    background: #fff8f5;
+
+    overflow: hidden;
+
+}
+
+
+/* =========================================
+   TEXTO DO RITUAL
+========================================= */
+
+.ritual-texto {
+
+    position: relative;
+
+    z-index: 50;
+
+}
+
+
+.ritual-texto h2 {
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size:
+        clamp(45px, 5vw, 75px);
+
+    font-weight: 400;
+
+    line-height: 1;
+
+    letter-spacing: -2px;
+
+}
+
+
+.ritual-texto h2 span {
+
+    color: #b98582;
+
+}
+
+
+.ritual-texto>p {
+
+    max-width: 420px;
+
+    color: #766866;
+
+    line-height: 1.8;
+
+    margin: 30px 0 40px;
+
+}
+
+
+.ritual-passo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    max-width: 400px;
+
+    padding: 18px 0;
+
+    border-bottom:
+        1px solid rgba(57, 44, 43, .12);
+
+}
+
+
+.ritual-passo>span {
+
+    color: #b98582;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+}
+
+
+.ritual-passo strong {
+
+    display: block;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 21px;
+
+    font-weight: 400;
+
+}
+
+
+.ritual-passo small {
+
+    display: block;
+
+    margin-top: 4px;
+
+    color: #8b7774;
+
+    font-size: 10px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+/* =========================================
+   ÁREA DA ILUSTRAÇÃO
+========================================= */
+
+.rosto-area {
+
+    height: 600px;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    perspective: 1000px;
+
+}
+
+
+.halo-rosto {
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(circle,
+            #ead4d2 0%,
+            #f5e7e3 50%,
+            rgba(245, 231, 227, 0) 72%);
+
+    animation:
+        haloPulsa 5s ease-in-out infinite;
+
+}
+
+
+@keyframes haloPulsa {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.04);
+    }
+
+}
+
+
+/* =========================================
+   CABELO
+========================================= */
+
+.cabelo {
+
+    position: absolute;
+
+    width: 310px;
+    height: 420px;
+
+    top: 65px;
+
+    border-radius:
+        48% 48% 35% 35%;
+
+    background:
+        linear-gradient(100deg,
+            #392c2b,
+            #624947 45%,
+            #2e2221);
+
+    z-index: 2;
+
+    box-shadow:
+        20px 25px 45px rgba(60, 35, 30, .18);
+
+}
+
+
+.cabelo-mecha {
+
+    position: absolute;
+
+    width: 35px;
+    height: 330px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 255, 255, .08);
+
+    filter: blur(2px);
+
+}
+
+
+.mecha1 {
+
+    left: 45px;
+    top: 30px;
+
+    transform:
+        rotate(-12deg);
+
+}
+
+
+.mecha2 {
+
+    left: 130px;
+    top: 15px;
+
+    transform:
+        rotate(3deg);
+
+}
+
+
+.mecha3 {
+
+    right: 35px;
+    top: 50px;
+
+    transform:
+        rotate(15deg);
+
+}
+
+
+/* =========================================
+   ROSTO
+========================================= */
+
+.rosto {
+
+    position: absolute;
+
+    width: 230px;
+    height: 305px;
+
+    top: 115px;
+
+    background:
+        linear-gradient(100deg,
+            #d99f8c,
+            #f0c0ad 50%,
+            #d99b88);
+
+    border-radius:
+        48% 48% 45% 45%;
+
+    z-index: 4;
+
+    box-shadow:
+        inset 10px 0 20px rgba(255, 255, 255, .18);
+
+}
+
+
+.rosto::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 25px;
+    height: 150px;
+
+    left: 25px;
+    top: 55px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 255, 255, .15);
+
+    filter: blur(7px);
+
+}
+
+
+/* =========================================
+   ORELHA
+========================================= */
+
+.orelha {
+
+    position: absolute;
+
+    width: 35px;
+    height: 65px;
+
+    right: -20px;
+    top: 125px;
+
+    border-radius: 50%;
+
+    background: #d99f8c;
+
+}
+
+
+/* =========================================
+   OLHOS
+========================================= */
+
+.olho {
+
+    position: absolute;
+
+    width: 45px;
+    height: 18px;
+
+    top: 105px;
+
+    border-bottom:
+        2px solid #513a36;
+
+    border-radius: 50%;
+
+}
+
+
+.olho-esquerdo {
+    left: 45px;
+}
+
+
+.olho-direito {
+    right: 45px;
+}
+
+
+.olho span {
+
+    position: absolute;
+
+    width: 5px;
+    height: 5px;
+
+    background: #392c2b;
+
+    border-radius: 50%;
+
+    left: 20px;
+    top: 8px;
+
+}
+
+
+.sobrancelha {
+
+    position: absolute;
+
+    width: 45px;
+    height: 8px;
+
+    border-top:
+        3px solid #553c37;
+
+    border-radius: 50%;
+
+    top: 82px;
+
+}
+
+
+.sobrancelha-esquerda {
+    left: 44px;
+}
+
+
+.sobrancelha-direita {
+    right: 44px;
+}
+
+
+/* =========================================
+   NARIZ
+========================================= */
+
+.nariz {
+
+    position: absolute;
+
+    width: 22px;
+    height: 58px;
+
+    left: 104px;
+    top: 115px;
+
+    border-right:
+        2px solid rgba(130, 75, 65, .25);
+
+    border-bottom:
+        2px solid rgba(130, 75, 65, .25);
+
+    border-radius:
+        0 0 15px 0;
+
+}
+
+
+/* =========================================
+   BOCA
+========================================= */
+
+.boca {
+
+    position: absolute;
+
+    width: 48px;
+    height: 18px;
+
+    left: 91px;
+    top: 210px;
+
+    border-bottom:
+        2px solid #a45f61;
+
+    border-radius: 50%;
+
+}
+
+
+/* =========================================
+   BOCHECHA
+========================================= */
+
+.bochecha {
+
+    position: absolute;
+
+    width: 75px;
+    height: 55px;
+
+    right: 20px;
+    top: 145px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(213, 117, 116, .16);
+
+    filter: blur(4px);
+
+}
+
+
+/* =========================================
+   CREME NA BOCHECHA
+========================================= */
+
+.creme-rosto {
+
+    position: absolute;
+
+    width: 43px;
+    height: 25px;
+
+    right: 27px;
+    top: 145px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(135deg,
+            #ffffff,
+            #f8eeee);
+
+    box-shadow:
+        0 3px 10px rgba(100, 60, 55, .12);
+
+    z-index: 10;
+
+    opacity: .95;
+
+    animation:
+        espalharCreme 4s ease-in-out infinite;
+
+}
+
+
+@keyframes espalharCreme {
+
+    0%,
+    20% {
+
+        width: 43px;
+
+        transform:
+            translateX(0) rotate(-8deg);
+
+        opacity: .95;
+
+    }
+
+    45% {
+
+        width: 65px;
+
+        transform:
+            translateX(-15px) rotate(-15deg);
+
+    }
+
+    70% {
+
+        width: 80px;
+
+        transform:
+            translateX(-30px) rotate(-8deg);
+
+        opacity: .55;
+
+    }
+
+    100% {
+
+        width: 43px;
+
+        transform:
+            translateX(0) rotate(-8deg);
+
+        opacity: .95;
+
+    }
+
+}
+
+
+/* =========================================
+   PESCOÇO
+========================================= */
+
+.pescoco {
+
+    position: absolute;
+
+    width: 100px;
+    height: 130px;
+
+    top: 380px;
+
+    background:
+        linear-gradient(90deg,
+            #d99d89,
+            #edb9a7,
+            #d49682);
+
+    border-radius:
+        20px 20px 45px 45px;
+
+    z-index: 1;
+
+}
+
+
+/* =========================================
+   OMBRO
+========================================= */
+
+.ombro {
+
+    position: absolute;
+
+    width: 390px;
+    height: 170px;
+
+    bottom: -25px;
+
+    background:
+        linear-gradient(90deg,
+            #d5a49a,
+            #e8c1b8,
+            #d29c92);
+
+    border-radius:
+        50% 50% 0 0;
+
+    z-index: 1;
+
+}
+
+
+/* =========================================
+   MÃO
+========================================= */
+
+.mao {
+
+    position: absolute;
+
+    width: 180px;
+    height: 250px;
+
+    right: 75px;
+    bottom: 70px;
+
+    z-index: 30;
+
+    transform:
+        rotate(-12deg);
+
+    animation:
+        maoAplicando 4s ease-in-out infinite;
+
+}
+
+
+@keyframes maoAplicando {
+
+    0%, 100% {
+        transform:
+            translate(45px, 60px)
+            rotate(-8deg);
+    }
+
+    35% {
+        transform:
+            translate(8px, 18px)
+            rotate(-4deg);
+    }
+
+    55% {
+        transform:
+            translate(0, 8px)
+            rotate(-2deg);
+    }
+
+    75% {
+        transform:
+            translate(10px, 20px)
+            rotate(-5deg);
+    }
+}
+
+
+.palma {
+
+    position: absolute;
+
+    width: 105px;
+    height: 145px;
+
+    right: 15px;
+    bottom: 0;
+
+    border-radius:
+        48% 45% 35% 35%;
+
+    background:
+        linear-gradient(100deg,
+            #d99d89,
+            #efbdab,
+            #d49480);
+
+    transform:
+        rotate(8deg);
+
+    box-shadow:
+        8px 15px 25px rgba(70, 40, 35, .15);
+
+}
+
+
+/* =========================================
+   DEDOS
+========================================= */
+
+.dedo {
+
+    position: absolute;
+
+    background:
+        linear-gradient(100deg,
+            #d99d89,
+            #efbdab,
+            #d49480);
+
+    border-radius: 30px;
+
+}
+
+
+.indicador {
+
+    width: 42px;
+    height: 155px;
+
+    right: 92px;
+    top: -65px;
+
+    transform:
+        rotate(5deg);
+
+    transform-origin:
+        bottom;
+
+}
+
+
+.medio {
+
+    width: 38px;
+    height: 125px;
+
+    right: 55px;
+    top: -25px;
+
+    transform:
+        rotate(10deg);
+
+}
+
+
+.anelar {
+
+    width: 35px;
+    height: 105px;
+
+    right: 25px;
+    top: 5px;
+
+    transform:
+        rotate(14deg);
+
+}
+
+
+.mindinho {
+
+    width: 31px;
+    height: 82px;
+
+    right: 0;
+    top: 35px;
+
+    transform:
+        rotate(18deg);
+
+}
+
+
+/* =========================================
+   UNHA
+========================================= */
+
+.unha {
+
+    position: absolute;
+
+    width: 27px;
+    height: 35px;
+
+    top: 4px;
+    left: 7px;
+
+    background:
+        #f4d4cc;
+
+    border-radius:
+        50% 50% 45% 45%;
+
+    box-shadow:
+        inset 0 2px 3px rgba(255, 255, 255, .7);
+
+}
+
+
+/* =========================================
+   CREME NO DEDO
+========================================= */
+
+.creme-dedo {
+
+    position: absolute;
+
+    width: 30px;
+    height: 19px;
+
+    left: 5px;
+    top: -7px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(circle at 30% 30%,
+            #ffffff,
+            #f8eeee);
+
+    box-shadow:
+        0 3px 8px rgba(70, 40, 35, .15);
+
+    z-index: 10;
+
+    animation:
+        cremeDedo 4s ease-in-out infinite;
+
+}
+
+
+@keyframes cremeDedo {
+
+    0%,
+    20% {
+
+        transform:
+            scale(1);
+
+    }
+
+    45%,
+    65% {
+
+        transform:
+            scale(.85);
+
+        opacity: .9;
+
+    }
+
+    80%,
+    100% {
+
+        transform:
+            scale(1);
+
+    }
+
+}
+
+
+/* =========================================
+   BRILHOS
+========================================= */
+
+.brilho {
+
+    position: absolute;
+
+    color: #b98582;
+
+    z-index: 40;
+
+    animation:
+        brilhoFlutua 3s ease-in-out infinite;
+
+}
+
+
+.brilho1 {
+
+    right: 40px;
+    top: 145px;
+
+    font-size: 24px;
+
+}
+
+
+.brilho2 {
+
+    left: 65px;
+    bottom: 120px;
+
+    font-size: 16px;
+
+    animation-delay: .8s;
+
+}
+
+
+.brilho3 {
+
+    right: 110px;
+    top: 80px;
+
+    font-size: 30px;
+
+    animation-delay: 1.4s;
+
+}
+
+
+@keyframes brilhoFlutua {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0) scale(1);
+
+        opacity: .5;
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-12px) scale(1.2);
+
+        opacity: 1;
+
+    }
+
+}
+
+
+/* =========================================
+   ROTINA
+========================================= */
+
+.rotina {
+
+    padding: 130px 7%;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 100px;
+
+    align-items: center;
+}
+
+
+.rotina-img {
+
+    width: 100%;
+
+    box-shadow:
+        20px 30px 70px rgba(50, 30, 25, .15);
+}
+
+
+.rotina h2 {
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 65px;
+
+    font-weight: 400;
+}
+
+
+.passo {
+
+    padding: 22px 0;
+
+    border-bottom:
+        1px solid rgba(50, 30, 25, .15);
+
+    display: flex;
+
+    gap: 20px;
+}
+
+
+.numero {
+
+    color: #b98582;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+}
+
+
+.passo h3 {
+
+    font-size: 16px;
+
+    margin-bottom: 5px;
+
+}
+
+
+.passo p {
+
+    font-size: 12px;
+
+    color: #7c6d6a;
+
+    line-height: 1.6;
+
+}
+
+
+/* =========================================
+   FRASE FINAL
+========================================= */
+
+.frase {
+
+    padding: 130px 7%;
+
+    background: #e8d5d1;
+
+    text-align: center;
+
+}
+
+
+.frase h2 {
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size:
+        clamp(40px, 6vw, 75px);
+
+    font-weight: 400;
+
+    max-width: 1000px;
+
+    margin: auto;
+
+}
+
+
+.frase p {
+
+    margin-top: 30px;
+
+    color: #74615e;
+
+    letter-spacing: 3px;
+
+    font-size: 10px;
+
+    text-transform: uppercase;
+
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+
+    background: #211817;
+
+    color: white;
+
+    padding:
+        80px 7% 30px;
+
+}
+
+
+.footer-content {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    padding-bottom: 60px;
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, .15);
+
+}
+
+
+footer h2 {
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 50px;
+
+    font-weight: 400;
+
+}
+
+
+footer p {
+
+    color: #bcaeaa;
+
+    max-width: 350px;
+
+    line-height: 1.7;
+
+    margin-top: 15px;
+
+    font-size: 13px;
+
+}
+
+
+.footer-links {
+
+    display: flex;
+
+    gap: 70px;
+
+}
+
+
+.footer-links h4 {
+
+    font-size: 10px;
+
+    color: #d3aaa6;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.footer-links a {
+
+    display: block;
+
+    color: #c5b5b2;
+
+    font-size: 12px;
+
+    margin: 12px 0;
+
+    text-decoration: none;
+
+}
+
+
+.copyright {
+
+    padding-top: 25px;
+
+    color: #81716e;
+
+    font-size: 10px;
+
+}
+
+
+/* =========================================
+   RESPONSIVO
+========================================= */
+
+@media(max-width:1050px) {
+
+    .produtos {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+}
+
+
+@media(max-width:850px) {
+
+    nav {
+
+        display: none;
+
+    }
+
+
+    .hero-container {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .hero {
+
+        padding-top: 130px;
+
+    }
+
+
+    .produto-hero {
+
+        min-height: 400px;
+
+    }
+
+
+    .circulo {
+
+        width: 350px;
+        height: 350px;
+
+    }
+
+
+    .experiencia-produto {
+
+        min-height: 850px;
+
+        flex-direction: column;
+
+    }
+
+
+    .sabonete-area {
+
+        width: 100%;
+
+        height: 560px;
+
+    }
+
+
+    .ingredientes {
+
+        position: relative;
+
+        right: auto;
+        top: auto;
+
+        width: 90%;
+
+        transform:
+            translateY(40px);
+
+        margin-top: -80px;
+
+    }
+
+
+    .experiencia-produto.aberto .ingredientes {
+
+        transform:
+            translateY(0);
+
+    }
+
+
+    .serum-experiencia {
+
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+
+        text-align: center;
+
+    }
+
+
+    .serum-info-area {
+
+        padding-right: 0;
+
+    }
+
+
+    .serum-info-area>p {
+
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+
+    .serum-ingredientes {
+
+        text-align: left;
+
+    }
+
+
+    /* NOVA SEÇÃO */
+
+    .ritual-creme {
+
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+        padding:
+            100px 6%;
+
+        gap: 40px;
+
+    }
+
+
+    .ritual-texto>p {
+
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+
+    .ritual-passo {
+
+        margin-left: auto;
+        margin-right: auto;
+
+        text-align: left;
+
+    }
+
+
+    .rosto-area {
+
+        height: 550px;
+
+    }
+
+
+    .rotina {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .titulo h2,
+    .interativo h2,
+    .rotina h2 {
+
+        font-size: 45px;
+
+    }
+
+
+    .footer-content {
+
+        flex-direction: column;
+
+        gap: 50px;
+
+    }
+
+
+    .footer-links {
+
+        gap: 40px;
+
+    }
+
+}
+
+
+@media(max-width:700px) {
+
+    .produto-modal-card {
+
+        grid-template-columns: 1fr;
+
+        max-height: 90vh;
+
+        overflow-y: auto;
+
+    }
+
+
+    .modal-imagem {
+
+        min-height: 280px;
+
+        max-height: 330px;
+
+    }
+
+
+    .modal-conteudo {
+
+        padding:
+            35px 28px 40px;
+
+    }
+
+}
+
+
+@media(max-width:500px) {
+
+    .hero {
+
+        padding-left: 5%;
+        padding-right: 5%;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 55px;
+
+    }
+
+
+    .logo-hero {
+
+        font-size: 21px;
+
+    }
+
+
+    .logo-hero-moon {
+
+        width: 32px;
+        height: 32px;
+
+    }
+
+
+    .circulo {
+
+        width: 300px;
+        height: 300px;
+
+    }
+
+
+    .produto-hero {
+
+        min-height: 350px;
+
+    }
+
+
+    .produtos {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .card-plus {
+
+        opacity: 1;
+
+        transform: scale(1);
+
+    }
+
+
+    .experiencia-produto {
+
+        min-height: 900px;
+
+    }
+
+
+    .sabonete {
+
+        width: 150px;
+
+        height: 280px;
+
+    }
+
+
+    .tampa {
+
+        width: 115px;
+
+        height: 63px;
+
+        left: 17px;
+
+        top: -63px;
+
+    }
+
+
+    .pump {
+
+        left: 32px;
+
+    }
+
+
+    .espuma {
+
+        left: 106px;
+
+    }
+
+
+    .espuma2 {
+
+        left: 116px;
+
+    }
+
+
+    .espuma3 {
+
+        left: 94px;
+
+    }
+
+
+    .espuma4 {
+
+        left: 131px;
+
+    }
+
+
+    .espuma5 {
+
+        left: 104px;
+
+    }
+
+
+    .produto-jato {
+
+        left: 143px;
+
+    }
+
+
+    .ingredientes {
+
+        width: 100%;
+
+    }
+
+
+    .ingrediente strong {
+
+        font-size: 17px;
+
+    }
+
+
+    .serum-interativo {
+
+        margin-top: 110px;
+
+        padding-top: 80px;
+
+    }
+
+
+    .serum-area {
+
+        height: 500px;
+
+    }
+
+
+    .serum-frasco {
+
+        width: 175px;
+
+        height: 275px;
+
+    }
+
+
+    .serum-gargalo {
+
+        left: 55px;
+
+    }
+
+
+    .conta-gotas {
+
+        left: 35px;
+
+    }
+
+
+    .serum-logo {
+
+        top: 90px;
+
+    }
+
+
+    .serum-nome {
+
+        top: 125px;
+
+    }
+
+
+    .serum-info {
+
+        top: 158px;
+
+    }
+
+
+    /* NOVA SEÇÃO NO CELULAR */
+
+    .ritual-creme {
+
+        padding:
+            80px 5%;
+
+    }
+
+
+    .ritual-texto h2 {
+
+        font-size: 45px;
+
+    }
+
+
+    .rosto-area {
+
+        height: 480px;
+
+        transform:
+            scale(.72);
+
+        transform-origin:
+            center top;
+
+        margin-bottom: -100px;
+
+    }
+
+
+    footer {
+
+        padding-left: 6%;
+        padding-right: 6%;
+
+    }
+
+}
+
+
+/* =========================================
+   ACESSIBILIDADE
+========================================= */
+
+@media(prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+
+        animation-duration:
+            .01ms !important;
+
+        animation-iteration-count:
+            1 !important;
+
+        scroll-behavior:
+            auto !important;
+
+        transition-duration:
+            .01ms !important;
+
+    }
+
+}
+
+.instagram-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.instagram-icon {
+    width: 22px;
+    height: 22px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.instagram-icon svg {
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.7;
+}
+
+.instagram-icon svg circle:last-child {
+    fill: currentColor;
+    stroke: none;
+}
+
+/* =========================================
+   CADEIA DE PRODUÇÃO
+========================================= */
+
+.cadeia-producao {
+    padding: 120px 8%;
+    background: #f8f2ef;
+}
+
+.cadeia-titulo {
+    max-width: 700px;
+    margin-bottom: 70px;
+}
+
+.cadeia-titulo > span,
+.grafico-texto > span {
+    display: block;
+
+    color: #b98582;
+
+    font-size: 10px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 20px;
+}
+
+.cadeia-titulo h2,
+.grafico-texto h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(45px, 6vw, 75px);
+
+    font-weight: 400;
+
+    line-height: 1;
+
+    margin-bottom: 25px;
+}
+
+.cadeia-titulo p,
+.grafico-texto p {
+    color: #756866;
+
+    line-height: 1.8;
+
+    max-width: 600px;
+}
+
+/* =========================================
+   FOTO DO SÉRUM — CADEIA DE PRODUÇÃO
+========================================= */
+
+.cadeia-topo {
+    display: grid;
+    grid-template-columns: 1fr 0.85fr;
+    align-items: center;
+    gap: 70px;
+    margin-bottom: 70px;
+}
+
+.cadeia-topo .cadeia-titulo {
+    max-width: 700px;
+    margin-bottom: 0;
+}
+
+.cadeia-imagem {
+    width: 100%;
+    max-width: 520px;
+    justify-self: end;
+    position: relative;
+    overflow: hidden;
+    border-radius: 2px;
+    box-shadow:
+        0 25px 60px rgba(61, 48, 46, 0.12);
+}
+
+.cadeia-imagem img {
+    display: block;
+    width: 100%;
+    height: 390px;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.7s ease;
+}
+
+.cadeia-imagem:hover img {
+    transform: scale(1.035);
+}
+
+
+/* =========================================
+   RESPONSIVO — FOTO DO SÉRUM
+========================================= */
+
+@media (max-width: 900px) {
+
+    .cadeia-topo {
+        grid-template-columns: 1fr;
+        gap: 45px;
+        margin-bottom: 70px;
+    }
+
+    .cadeia-topo .cadeia-titulo {
+        max-width: 700px;
+    }
+
+    .cadeia-imagem {
+        max-width: 100%;
+        justify-self: stretch;
+    }
+
+    .cadeia-imagem img {
+        height: 360px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .cadeia-topo {
+        gap: 35px;
+        margin-bottom: 55px;
+    }
+
+    .cadeia-imagem img {
+        height: 280px;
+    }
+
+}
+
+
+/* =========================================
+   ETAPAS
+========================================= */
+
+.cadeia-etapas {
+    display: flex;
+
+    align-items: stretch;
+
+    gap: 0;
+
+    margin-bottom: 100px;
+}
+
+.cadeia-etapa {
+    flex: 1;
+
+    background: #fff;
+
+    padding: 35px 28px;
+
+    min-height: 280px;
+
+    position: relative;
+
+    border: 1px solid rgba(61, 48, 46, 0.08);
+
+    transition: 0.3s;
+}
+
+.cadeia-etapa:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 20px 40px rgba(61, 48, 46, 0.08);
+}
+
+.etapa-numero {
+    color: #b98582;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+}
+
+.etapa-conteudo span {
+    display: block;
+
+    margin-top: 35px;
+
+    color: #9c8985;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+}
+
+.etapa-conteudo h3 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 27px;
+
+    font-weight: 400;
+
+    margin: 12px 0;
+}
+
+.etapa-conteudo p {
+    color: #756866;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+
+    margin-bottom: 25px;
+}
+
+.etapa-conteudo strong {
+    color: #b98582;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 25px;
+
+    font-weight: 400;
+}
+
+.linha-cadeia {
+    width: 30px;
+
+    height: 1px;
+
+    background: #c7aaa5;
+
+    align-self: center;
+}
+
+
+/* =========================================
+   DISTRIBUIÇÃO DO LUCRO
+========================================= */
+
+.distribuicao-lucro {
+    display: grid;
+
+    grid-template-columns: 0.8fr 1.2fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+.grafico-texto h2 {
+    margin-bottom: 25px;
+}
+
+.valor-serum {
+    display: block;
+
+    color: #b98582;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 45px;
+
+    font-weight: 400;
+
+    margin-top: 8px;
+}
+
+
+/* =========================================
+   GRÁFICO
+========================================= */
+
+.grafico {
+    background: #fff;
+
+    padding: 45px;
+
+    border: 1px solid rgba(61, 48, 46, 0.08);
+
+    box-shadow:
+        0 25px 60px rgba(61, 48, 46, 0.08);
+}
+
+.grafico-item {
+    margin-bottom: 30px;
+}
+
+.grafico-legenda {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    margin-bottom: 9px;
+
+    font-size: 12px;
+}
+
+.grafico-legenda span {
+    color: #756866;
+}
+
+.grafico-legenda strong {
+    font-weight: 500;
+
+    color: #3d302e;
+}
+
+.grafico-barra {
+    width: 100%;
+
+    height: 38px;
+
+    background: #eee4e0;
+
+    overflow: hidden;
+}
+
+.grafico-preenchimento {
+    height: 100%;
+
+    transition: width 1s ease;
+}
+
+.grafico-preenchimento.custo {
+    background: #b98582;
+}
+
+.grafico-preenchimento.invisiveis {
+    background: #d5aaa5;
+}
+
+.grafico-preenchimento.margem {
+    background: #765451;
+}
+
+.grafico-total {
+    margin-top: 35px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid rgba(61, 48, 46, 0.12);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.grafico-total span {
+    color: #756866;
+
+    font-size: 12px;
+}
+
+.grafico-total strong {
+    font-family: "Playfair Display", serif;
+
+    font-size: 30px;
+
+    font-weight: 400;
+
+    color: #3d302e;
+}
+
+
+/* =========================================
+   RESPONSIVO
+========================================= */
+
+@media (max-width: 900px) {
+
+    .cadeia-etapas {
+        flex-direction: column;
+    }
+
+    .linha-cadeia {
+        width: 1px;
+
+        height: 25px;
+
+        margin: 0 auto;
+    }
+
+    .distribuicao-lucro {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+}
+
+/* =========================================
+   GRÁFICO FINANCEIRO DO SÉRUM
+========================================= */
+
+.grafico-titulo {
+    margin-bottom: 35px;
+}
+
+.grafico-titulo > span {
+    display: block;
+
+    color: #b98582;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 10px;
+}
+
+.grafico-titulo h3 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 32px;
+
+    font-weight: 400;
+
+    margin-bottom: 8px;
+}
+
+.grafico-titulo p {
+    color: #756866;
+
+    font-size: 12px;
+}
+
+.grafico-item {
+    margin-bottom: 28px;
+}
+
+.grafico-legenda {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    margin-bottom: 8px;
+
+    font-size: 12px;
+}
+
+.grafico-legenda span {
+    color: #756866;
+}
+
+.grafico-legenda strong {
+    color: #3d302e;
+
+    font-weight: 500;
+}
+
+.grafico-barra {
+    width: 100%;
+
+    height: 35px;
+
+    background: #eee4e0;
+
+    border-radius: 3px;
+
+    overflow: hidden;
+}
+
+.grafico-preenchimento {
+    height: 100%;
+
+    transition: width 0.8s ease;
+}
+
+.grafico-preenchimento.custo {
+    background: #b98582;
+}
+
+.grafico-preenchimento.invisiveis {
+    background: #d8aaa4;
+}
+
+.grafico-preenchimento.margem {
+    background: #765451;
+}
+
+.grafico-resumo {
+    margin-top: 30px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(61, 48, 46, 0.12);
+}
+
+.grafico-resumo > div {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 7px 0;
+}
+
+.grafico-resumo span {
+    color: #756866;
+
+    font-size: 12px;
+}
+
+.grafico-resumo strong {
+    color: #3d302e;
+
+    font-size: 13px;
+}
+
+.grafico-resumo .grafico-total {
+    margin-top: 12px;
+
+    padding-top: 18px;
+
+    border-top: 1px solid rgba(61, 48, 46, 0.12);
+}
+
+.grafico-resumo .grafico-total strong {
+    color: #b98582;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 28px;
+
+    font-weight: 400;
+}
+
+
+/* =========================================
+   CUIDADO À ENTREGA + IMAGEM
+========================================= */
+
+.cuidado-entrega {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 70px;
+
+    width: 100%;
+}
+
+.cuidado-conteudo {
+    max-width: 600px;
+}
+
+.cuidado-conteudo h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(45px, 6vw, 75px);
+
+    font-weight: 400;
+
+    line-height: 1;
+
+    margin-bottom: 25px;
+}
+
+.cuidado-conteudo p {
+    color: #756866;
+
+    line-height: 1.8;
+
+    max-width: 500px;
+}
+
+
+/* ESPAÇO DA IMAGEM */
+
+.cuidado-imagem {
+    width: 100%;
+
+    min-height: 420px;
+
+    background: #eee2de;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    border-radius: 4px;
+}
+
+.cuidado-imagem img {
+    width: 100%;
+
+    height: 100%;
+
+    min-height: 420px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* QUANDO AINDA NÃO TIVER IMAGEM */
+
+.cuidado-imagem:has(img[src="sua-imagem.jpg"])::before {
+    content: "INSIRA A IMAGEM AQUI";
+
+    position: absolute;
+
+    color: #9f8985;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+}
+
+@media (max-width: 600px) {
+
+    .cadeia-producao {
+        padding: 80px 6%;
+    }
+
+    .grafico {
+        padding: 30px 20px;
+    }
+
+    .grafico-legenda {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 5px;
+    }
+
+}
+
+
+/* =========================================
+   INSTAGRAM FLUTUANTE
+========================================= */
+
+.instagram-flutuante {
+    position: fixed;
+    right: 28px;
+    bottom: 28px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: #392c2b;
+    color: #fff;
+    text-decoration: none;
+    z-index: 1500;
+    box-shadow: 0 12px 30px rgba(36, 27, 26, .24);
+    transition: transform .3s ease, box-shadow .3s ease, background .3s ease;
+}
+
+.instagram-flutuante:hover {
+    transform: translateY(-5px) scale(1.05);
+    background: #b98582;
+    box-shadow: 0 18px 38px rgba(36, 27, 26, .28);
+}
+
+.instagram-flutuante svg {
+    width: 25px;
+    height: 25px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.7;
+}
+
+.instagram-flutuante svg circle:last-child {
+    fill: currentColor;
+    stroke: none;
+}
+
+
+/* =========================================
+   RESPONSIVO — FINANCEIRO + INSTAGRAM
+========================================= */
+
+@media (max-width: 900px) {
+
+    .financeiro-container {
+        grid-template-columns: 1fr;
+        gap: 55px;
+    }
+
+    .financeiro-dados {
+        padding: 32px 25px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .financeiro {
+        padding: 90px 6%;
+    }
+
+    .financeiro-produto {
+        grid-template-columns: auto 1fr;
+    }
+
+    .financeiro-preco {
+        grid-column: 2;
+        text-align: left;
+        margin-top: -5px;
+    }
+
+    .financeiro-linha {
+        grid-template-columns: .5fr 1fr 1fr;
+        font-size: 10px;
+    }
+
+    .instagram-flutuante {
+        width: 50px;
+        height: 50px;
+        right: 18px;
+        bottom: 18px;
+    }
+
+}
